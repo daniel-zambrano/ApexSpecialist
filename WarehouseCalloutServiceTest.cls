@@ -9,5 +9,7 @@ private class WarehouseCalloutServiceTest {
         WarehouseCalloutService.runWarehouseEquipmentSync();
         Test.stopTest();
         System.assertEquals(1, [SELECT count() FROM Product2]);
+        System.enqueueJob(new WarehouseCalloutService());
+
     }     
 }
