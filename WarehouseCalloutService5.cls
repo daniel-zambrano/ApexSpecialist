@@ -23,7 +23,7 @@ public with sharing class WarehouseCalloutService {
             System.debug(response.getBody());
             
             //class maps the following fields: replacement part (always true), cost, current inventory, lifespan, maintenance cycle, and warehouse SKU
-            //warehouse SKU will be external ID for identifying which equipment records to update within Salesforce
+            //warehouse SKU will be external ID for identifying which equipment records to update within Salesforces
 
             for (Object eq : jsonResponse){
                 Map<String,Object> mapJson = (Map<String,Object>)eq;
